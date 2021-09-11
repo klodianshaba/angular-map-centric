@@ -1,0 +1,17 @@
+@import "src/app/scss/variables";
+.map-centric-content{
+  height: 100vh;
+
+  .statistics-content{
+    z-index: 1000 !important;
+    position: absolute;
+    background-color: white;
+    bottom: 33px;
+    left: 7px;
+    width: auto;
+    min-width: 40px;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: $shadow;
+  }
+}

@@ -1,0 +1,14 @@
+
+<div class="map-centric-content" *ngIf="apiLoaded | async">
+  <google-map height="100%" width="100%" backgroundColor="white" [center]="center" [zoom]="zoom" (mapClick)="addMarker($event)">
+    <map-marker-clusterer [imagePath]="markerClustererImagePath">
+    <map-marker #mapMarker="mapMarker" *ngFor="let marker of map.markers;trackBy: trackByFn" [position]="marker.position"
+                [options]="markerOptions" (mapClick)="infoMarker.openWindow(mapMarker, marker)">
+    </map-marker>
+    </map-marker-clusterer>
+    <app-map-info-marker #infoMarker></app-map-info-marker>
+    <div class="statistics-content">
+      <app-map-statistics></app-map-statistics>
+    </div>
+  </google-map>
+</div>
