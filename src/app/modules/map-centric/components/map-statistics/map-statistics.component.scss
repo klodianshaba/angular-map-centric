@@ -1,0 +1,10 @@
+@import "src/app/scss/variables";
+.map-statistics-content{
+  .item{
+    text-align: center;
+    padding: map_get($padding, bottom);
+  }
+  :last-child{
+    padding: 0;
+  }
+}
