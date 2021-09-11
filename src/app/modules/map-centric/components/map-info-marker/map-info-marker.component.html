@@ -1,0 +1,18 @@
+
+<map-info-window>
+  <div class="info-content">
+    <div class="info-header">
+      <strong>{{label}}</strong>
+      <div class="action"> <mat-icon (click)="closeWindow()">close</mat-icon> </div>
+    </div>
+    <div class="property">
+      <strong>Lat: </strong>{{marker.position.lat}}
+    </div>
+    <div class="property">
+      <strong>Lng: </strong>{{marker.position.lng}}
+    </div>
+    <div class="property">
+      <strong>created: </strong> {{date.toLocaleString( marker.createdAt )}}
+    </div>
+  </div>
+</map-info-window>

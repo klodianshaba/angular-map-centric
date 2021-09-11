@@ -1,0 +1,31 @@
+@import "src/app/scss/variables";
+@import "src/app/scss/mixins";
+::ng-deep .gm-style .gm-style-iw-c {
+  padding: 10px;
+  > button{ display: none !important; }
+}
+.info-content {
+  .info-header {
+    font-size: map_get($size, large);
+    display: flex;
+    padding: map_get($padding, bottom);
+    justify-content: space-between;
+    .mat-icon{
+      position: relative;
+      top: -3px;
+      @include cursor-pointer;
+    }
+    .action{
+      position: absolute;
+      right: 10px;
+    }
+  }
+
+  .property {
+    margin-bottom: 5px;
+  }
+
+  :last-child{
+    margin: 0;
+  }
+}
